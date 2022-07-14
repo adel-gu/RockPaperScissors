@@ -2,7 +2,6 @@
 
 // choose randomly between ['Rock', 'Paper', 'Scissors']
 const CHECKHAND = ["rock", "paper", "scissors"]; // for checking logic arguments and user inputs.
-const HAND = ["Rock", "Paper", "Scissors"]; // For showing a clean result to the user.
 
 //? Main Function
 game();
