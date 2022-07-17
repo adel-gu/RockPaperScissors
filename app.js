@@ -13,9 +13,17 @@ function game() {
   // play 5 rounds of game, and keep track of scores.
   for (let i = 0; i < 5; i++) {
     const computerSelection = computerPlay();
-    const playerSelection = prompt(
+    let playerSelection = prompt(
       "Choose an Option to save the world: Rock, Paper or Scissors !?"
     );
+
+    if (!CHECKHAND.includes(playerSelection.toLocaleLowerCase()))
+      do {
+        playerSelection = prompt(
+          "Be carful and hurry chose wisely : Rock, Paper or Scissors, the world in danger!!!"
+        );
+      } while (!CHECKHAND.includes(playerSelection.toLocaleLowerCase()));
+
     if (playerSelection != null) {
       let round = playRound(playerSelection, computerSelection);
       if (round == 1) pScore++;
